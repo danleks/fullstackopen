@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const LoggedInUser = ({ username, handleLogout }) => {
   return (
     <div>
@@ -7,6 +9,11 @@ const LoggedInUser = ({ username, handleLogout }) => {
       </div>
     </div>
   )
+}
+
+LoggedInUser.propTypes = {
+  username: PropTypes.string.isRequired,
+  handleLogout: PropTypes.func.isRequired,
 }
 
 export default LoggedInUser
